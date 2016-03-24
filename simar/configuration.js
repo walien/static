@@ -1,5 +1,5 @@
 var preprod = 'http://www.preprod.simar.re/mobile';
-var prod = 'https://www.simar.re/mobile';
+var _default, prod = 'https://www.simar.re/mobile';
 var localhost  = '';
 
 var configuration = {
@@ -12,8 +12,8 @@ angular.module('config', [])
 
         backendUrl: function () {
             var url = configuration[appVersion];
-            if (url) return url;
-            return prod
+            if (!url) return _default;
+            return url;
         }
 
     });
