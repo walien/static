@@ -1,5 +1,12 @@
 (function (module) {
 
+    var Envs = {
+        preprod: 'http://www.preprod.simar.re/mobile',
+        prod: 'https://www.simar.re/mobile',
+        local: ''
+    };
+    Envs._default = Envs.local;
+
     /**
       Edit this part ONLY
     **/
@@ -8,13 +15,6 @@
         '1.0': Envs.preprod
     };
     /**************/
-
-    var Envs = {
-        preprod: 'http://www.preprod.simar.re/mobile',
-        prod: 'https://www.simar.re/mobile',
-        local: ''
-    };
-    Envs._default = Envs.local;
 
     var ServerConfig = {
         backendUrl: function () {
