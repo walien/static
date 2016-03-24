@@ -12,7 +12,7 @@ angular.module('config', [])
 
         backendUrl: function () {
             var url = configuration[appVersion];
-            if (!url) return _default;
+            if (url === undefined || url === null) return _default;
             return url;
         }
 
