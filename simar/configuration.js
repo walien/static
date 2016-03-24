@@ -1,5 +1,5 @@
 var preprod = 'http://www.preprod.simar.re/mobile';
-var _default, prod = 'https://www.simar.re/mobile';
+var prod = _default = 'https://www.simar.re/mobile';
 var localhost  = '';
 
 var configuration = {
