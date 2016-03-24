@@ -9,10 +9,11 @@ var configuration = {
 
 angular.module('config', [])
     .constant('ServerConfig', {
-
+        
         backendUrl: function () {
             var url = configuration[appVersion];
             if (url) return url;
             return prod
         }
+        
     });
