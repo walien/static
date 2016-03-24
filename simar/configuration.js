@@ -1,5 +1,14 @@
 (function (module) {
 
+    /**
+      Edit this part ONLY
+    **/
+    var configuration = {
+        'dev': Envs.local,
+        '1.0': Envs.preprod
+    };
+    /**************/
+
     var Envs = {
         preprod: 'http://www.preprod.simar.re/mobile',
         prod: 'https://www.simar.re/mobile',
@@ -13,11 +22,6 @@
             if (url === undefined || url === null) return Envs._default;
             return url;
         }
-    };
-
-    var configuration = {
-        'dev': Envs.local,
-        '1.0': Envs.preprod
     };
 
     module
