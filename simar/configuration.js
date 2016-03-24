@@ -1,18 +1,18 @@
 angular.module('config', [])
     .constant('ServerConfig', {
 
-        /**
-         * By default, in dev mode, ionic will proxify the backend API to SIMAR Preprod Mobile
-         * Appserver (this configuration appears in the ionic.project file): no backend url should be filled.
-         * When the app needs to be packaged, the below backendUrl MUST be filled with a real backend URL.
-         */
+        var preprod = 'http://www.preprod.simar.re/mobile';
+        var prod = 'https://www.simar.re/mobile';
+        var localhost  = 'http://localhost:8082';
+         
+        var configuration = {
+            'dev': localhost,
+            '1.0': preprod
+        };
 
         backendUrl: function () {
-            console.log(appVersion);
-            if (window.cordova) {
-                return 'http://www.preprod.simar.re/mobile';
-            }
-            return '';
+            var url = configuration[appVersion];
+            if (url) return url;
+            return prod
         }
-
     });
