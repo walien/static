@@ -12,7 +12,8 @@
     **/
     var configuration = {
         'dev': Envs.local,
-        '1.0': Envs.preprod
+        '1.0': Envs.preprod,
+        '1.1': Envs.prod
     };
     /**************/
 
